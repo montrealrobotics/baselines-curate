@@ -69,7 +69,7 @@ class HumanOutputFormat(KVWriter, SeqWriter):
         self.file.flush()
 
     def _truncate(self, s):
-        maxlen = 30
+        maxlen = 60
         return s[:maxlen-3] + '...' if len(s) > maxlen else s
 
     def writeseq(self, seq):
